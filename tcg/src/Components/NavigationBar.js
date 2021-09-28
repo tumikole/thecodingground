@@ -1,28 +1,42 @@
-import React, { Component } from 'react'
-import { Navbar,Nav,NavDropdown } from 'react-bootstrap'
-
+import React, { Component } from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import Registration from './Registration'
+import {BrowserRouter as Router, Route  } from "react-router-dom";
 
 export default class NavigationBar extends Component {
-    render() {
-        return (
-            <div>
-                <Navbar bg="light" expand="lg">
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <NavDropdown title="Menu" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.2">CONTACT US</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.1">WHAT WILL I LEARN</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">ABOUT TCG</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action/3.4">MEET THE MENTORS</NavDropdown.Item>
-        </NavDropdown>
-      </Nav>
-    </Navbar.Collapse>
-   
-</Navbar>
-            </div>
-        )
-    }
-}
+  render() {
+    return (
+      <Router>
+        <div>
+          <Navbar expand="lg">
+          <Route path="/register" component={Registration}> 
+        
+              <Nav.Link href="/home">REGISTER</Nav.Link>
+            
 
+          </Route> 
+            |
+            <Nav.Item>
+              <Nav.Link eventKey="link-1">CONTACT US</Nav.Link>
+            </Nav.Item>
+            |
+            <Nav.Item>
+              <Nav.Link eventKey="link-1">WHAT WILL I LEARN</Nav.Link>
+            </Nav.Item>
+            |
+            <Nav.Item>
+              <Nav.Link eventKey="link-1">ABOUT TCG</Nav.Link>
+            </Nav.Item>
+            |
+            <Nav.Item>
+              <Nav.Link eventKey="link-1">MEET THE MENTORS</Nav.Link>
+            </Nav.Item>
+            {/* <Nav.Item>
+    <Nav.Link eventKey="link-1">Option 2</Nav.Link>
+  </Nav.Item> */}
+          </Navbar>
+        </div>
+      </Router>
+    );
+  }
+}

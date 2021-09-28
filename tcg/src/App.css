@@ -4,17 +4,17 @@
   height: 100vh;
 }
 
-.topnav {
-  background-color: white;
-  padding: 20px;
+a {
+  color: #f8f9fa !important;
+  transition: .35s !important;
 }
 
-.registerText{
+/* .registerText{
   color:white;
-  padding-right: 2em;
+  padding-right: 2em; */
   /* margin-bottom: 2em; */
 
-}
+/* } */
 
 
 
@@ -77,4 +77,34 @@ h2 {
   font-weight: normal;
   margin: 1.2rem;
   font-size: 1.5rem;
+}
+
+.intro-section {
+  background-color: green;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+  margin-right: 5rem;
+  margin-left: 5rem;
+  color: black;
+}
+
+.service {
+  justify-self: center;
+  text-align: center;
+  color: #555555;
+}
+
+p {
+  line-height: 1.8;
+  font-weight: 400;
+  font-size: 1.1rem;
 }

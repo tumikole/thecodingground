@@ -3,23 +3,7 @@ import { MDBRow, MDBCol, MDBBtn } from "mdbreact";
 
 
 export default class Registratuion extends Component {
-    state = {
-        fname: "",
-        lname: "",
-        email: "",
-        city: "",
-        state: "",
-        zip: ""
-      };
-    
-      submitHandler = event => {
-        event.preventDefault();
-        event.target.className += " was-validated";
-      };
-    
-      changeHandler = event => {
-        this.setState({ [event.target.name]: event.target.value });
-      };
+   
     
       render() {
         return (
