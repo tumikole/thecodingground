@@ -6,17 +6,15 @@
 
 a {
   color: #f8f9fa !important;
-  transition: .35s !important;
+  transition: 0.35s !important;
 }
 
 /* .registerText{
   color:white;
   padding-right: 2em; */
-  /* margin-bottom: 2em; */
+/* margin-bottom: 2em; */
 
 /* } */
-
-
 
 .tcgLogo {
   display: block;
@@ -37,7 +35,6 @@ a {
   text-align: center;
   font-weight: normal;
   letter-spacing: 1.8;
-
 }
 .headerMedium {
   font-size: 5rem;
@@ -107,4 +104,75 @@ p {
   line-height: 1.8;
   font-weight: 400;
   font-size: 1.1rem;
+}
+
+.applicationContainer {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background-color: var(--light-green);
+  grid-gap: 2rem;
+  justify-content: center;
+  justify-items: center;
+  padding: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.applicationImage {
+  height: auto;
+  justify-self: end;
+  align-self: center;
+  width: 44rem;
+}
+
+.sideInfo {
+  display: flex;
+  justify-self: start;
+  text-align: left;
+}
+
+.sideInfo h1 {
+  line-height: 3rem;
+}
+
+.sideInfo p {
+  max-width: 33rem;
+}
+
+.whatToLearnContainer {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  background-color: var(--dark-green);
+  color: white;
+  padding-top: 3rem;
+  grid-gap: 9rem;
+  padding-bottom: 3rem;
+  line-height: 1.5rem;
+}
+
+.learnSide1 {
+  display: grid;
+  justify-self: end;
+  grid-gap: 2rem;
+}
+
+.learnSide2 {
+  display: grid;
+  justify-self: start;
+  align-self: end;
+}
+ul {
+  list-style-type: disc;
+}
+
+
+li {
+  display: list-item;
+  list-style: none;
+}
+
+.logoWhite {
+  width: 186px;
+  height: 215px;
+  justify-self: end;
 }

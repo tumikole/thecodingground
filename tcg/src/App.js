@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 import NavigationBar from "./Components/NavigationBar";
 import Logo from "../src/img/Logo-White.png";
-// import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./App.css";
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     fname: "",
-  //     lname: "",
-  //     email: "",
-  //     city: "",
-  //     state: "",
-  //     zip: "",
-  //     isOpen: false,
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      fname: "",
+      lname: "",
+      email: "",
+      city: "",
+      state: "",
+      zip: "",
+      // isOpen: false,
+    };
+  }
 
   // openModal = () => {
   //   this.setState({
@@ -31,19 +31,21 @@ class App extends Component {
   //   });
   // };
 
-  // submitHandler = (event) => {
-  //   event.preventDefault();
-  //   event.target.className += " was-validated";
-  // };
+  submitHandler = (event) => {
+    event.preventDefault();
+    event.target.className += " was-validated";
+  };
 
-  // changeHandler = (event) => {
-  //   this.setState({ 
-  //     [event.target.name]: event.target.value 
-  //   });
-  // };
+  changeHandler = (event) => {
+    this.setState({ 
+      [event.target.name]: event.target.value 
+    });
+  };
 
   render() {
     return (
+      <Router>
+        <Switch>
       <>
         <div className="homeBody">
           <NavigationBar />
@@ -61,6 +63,8 @@ class App extends Component {
           </div>
         </div>
       </>
+      </Switch>
+      </Router>
     );
   }
 }
